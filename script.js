@@ -5,7 +5,7 @@ async function getdata(url){
     let response=await fetch(url)
      let data =await response.json();
 
-     console.log(data)
+     //console.log(data)
      showdata(data)
   }
   catch(error){
@@ -31,7 +31,7 @@ const addbtn=document.getElementById("btn")
     // console.log("entered")
      const inputElement = document.getElementById('inner');
          var inputValue = inputElement.value.trim();
-         let url=`http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&APPID=b819b0c5e7a853a6d272db9a6f04b4d5`;
+         let url=`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&APPID=b819b0c5e7a853a6d272db9a6f04b4d5`;
         // console.log(url)
         inputValue=inputValue.toLowerCase();
         if(inputValue=="" || undefined){
@@ -150,7 +150,7 @@ function showdata(data){
   function getTemperatureByCityName(cityName) {
     //console.log(cityName,"cityybullllllshitttt")
     const cardElement = document.getElementById(cityName);
-    console.log(cardElement,"cardElement")
+   // console.log(cardElement,"cardElement")
     if (!cardElement) return undefined;
     
   
